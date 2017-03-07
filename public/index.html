@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>宁海小游戏</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .mainpic{   
+            filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    
+            -webkit-filter: blur(10px); /* Chrome, Opera */
+            -moz-filter: blur(10px);
+            -ms-filter: blur(10px);    
+               filter: blur(10px);
+    
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">宁海小游戏</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">综述</a></li>
+                <li><a href="#summary-container">简述</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+<!--         <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li> -->
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img class="mainpic" src="images/toppage.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>宁海小游戏</h1>
+
+                    <p>本应用是浙江鑫长网络科技有限公司为玩家精心打造的宁海棋牌娱乐中心。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="apk/ninghaigame.apk"
+                          role="button" target="_blank">点我下载</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/dezhoupuke.png" alt="dezhoupuke">
+
+            <h2>德州扑克</h2>
+
+            <p>中文简称德州扑克。它是一种玩家对玩家的公共牌类游戏。一张台面至少2人，最多22人，一般是由2-10人参加。德州扑克一共有52张牌，没有王牌。每个玩家分两张牌作为“底牌”，五张由荷官陆续朝上发出的公共牌。开始的时候，每个玩家会有两张面朝下的底牌。经过所有押注圈后，若仍不能分出胜负，游戏会进入“摊牌”阶段，也就是让所剩的玩家亮出各自的底牌以较高下，持大牌者获胜。</p>
+
+            <p><a class="btn btn-default" href="apk/ninghaigame.apk" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/shisanzhang.png" alt="shisanzhang">
+
+            <h2>十三张</h2>
+
+            <p>“十三张”于20世纪初开始于德克萨斯洛布斯镇，是一款定位在锻炼智力水平、勇气的纯休闲类游戏。十三张是一种技巧性非常强、运气成分相对较少的扑克游戏，易于上手但难于精通，游戏过程中需要充分的和其他玩家斗智力、耍手腕、动脑筋，只有知己知彼方能百战百胜。</p>
+
+            <p><a class="btn btn-default" href="apk/ninghaigame.apk" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/douniu.png" alt="douniu">
+
+            <h2>斗牛</h2>
+
+            <p>牛牛又名“斗牛”游戏是流行于浙南一带的游戏，主要的游戏平台有宁海小游戏等。两人以上即可玩的扑克游戏，玩法简单有趣，上手快，娱乐性强。该游戏由2到5人玩一副牌（54张），其中一家为庄家，其余为闲家，发完牌后即可开牌比牌，庄家与所有闲家一一进行比较，牌型大者为赢，牌型小者为输。</p>
+
+            <p><a class="btn btn-default" href="apk/ninghaigame.apk" role="button">点我下载</a></p>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <div class="modal-body">
+                    <p>本应用是浙江鑫长网络科技有限公司为玩家精心打造的宁海棋牌娱乐中心。有德州扑克，斗牛，十三张，两人以上即可玩的扑克游戏，玩法简单有趣，上手快，娱乐性强。博的不仅是运气，还要分析数据，选择对策，才能常胜。有别于斗地主、德州扑克、麻将、飘三叶、三人斗、双扣、升级等扑克游戏，节奏很快无需费脑。还可像休闲益智类的打飞机、天天酷跑、爱消除、飞车、节奏大师那样直接分享成绩和排名，赢了就分享到微信中得瑟得瑟。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+
+        <p>&copy; 2017 浙江鑫长网络科技有限公司 </p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
